@@ -32,5 +32,10 @@
 .text-gray-600 { color: #4B5563; }
 .text-[#2563EB] { color: var(--primary); }
 
+/* Icon sizing utility to ensure consistent rendering across components */
+.icon-sm { width: 1.25rem; height: 1.25rem; }
+.icon-md { width: 1.75rem; height: 1.75rem; }
+.icon-lg { width: 2rem; height: 2rem; }
+
 /* Helper */
 .surface-card { background: var(--surface); }
