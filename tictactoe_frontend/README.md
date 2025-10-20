@@ -1,75 +1,38 @@
-# Nuxt Minimal Starter
+# Tic-Tac-Toe Nuxt Frontend
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Ocean Professional themed Tic-Tac-Toe UI built with Nuxt 3.
 
-## Setup
+## Features
+- Modern responsive 3x3 grid UI
+- Player vs Player and Player vs AI (simple heuristic: win/block/center/corner/first)
+- StatusBar with current turn and game status
+- Controls to reset and switch modes
+- In-memory audit trail panel with ISO8601 timestamps
+- Validation for illegal moves and out-of-turn clicks (occupied cells ignored)
+- Error handling scaffolding with user-facing message area
+- Reusable composables:
+  - useGame: game state, validation, win/draw detection, AI moves
+  - useAuditTrail: structured logging scaffold
+- Basic unit tests for core logic (Vitest-style)
 
-Make sure to install dependencies:
+## Run
+- npm install
+- npm run dev
+- Open http://localhost:3000
 
-```bash
-# npm
-npm install
+## Structure
+- pages/index.vue: main page that assembles components
+- components/: GameBoard, GameCell, Controls, StatusBar, AuditPanel
+- composables/: useGame.ts, useAuditTrail.ts
+- types/game.ts: shared types
+- assets/styles/theme.css: Ocean Professional theme variables and utilities
+- plugins/theme.client.ts: injects theme stylesheet on client
 
-# pnpm
-pnpm install
+## Compliance (GxP-style scaffolding)
+- Audit entries include: user ID (placeholder), timestamp, action, before/after states, metadata.
+- No backend or e-signature integration at this stage; scaffolding only.
+- Input validation and error handling with friendly UI messages.
 
-# yarn
-yarn install
+## Tests
+- tests/unit/useGame.spec.ts validates win/draw detection, move validation, and AI response.
 
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

@@ -1,0 +1,36 @@
+:root {
+  /* Ocean Professional Theme */
+  --primary: #2563EB;
+  --secondary: #F59E0B;
+  --error: #EF4444;
+  --background: #f9fafb;
+  --surface: #ffffff;
+  --text: #111827;
+}
+
+/* Simple utility classes to mimic Tailwind-esque spacing where needed */
+.grid { display: grid; }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.gap-2 { gap: 0.5rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.items-start { align-items: start; }
+.mt-4 { margin-top: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.p-3 { padding: 0.75rem; }
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+.rounded-xl { border-radius: 1rem; }
+.shadow-md { box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+.shadow-inner { box-shadow: inset 0 2px 8px rgba(0,0,0,0.06); }
+.max-w-3xl { max-width: 48rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+.min-h-screen { min-height: 100vh; }
+.text-gray-500 { color: #6B7280; }
+.text-gray-600 { color: #4B5563; }
+.text-[#2563EB] { color: var(--primary); }
+
+/* Helper */
+.surface-card { background: var(--surface); }
